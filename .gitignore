@@ -1,0 +1,6 @@
+guardian_backend/guardian_backend/__pycache__/__init__.cpython-310.pyc
+guardian_backend/guardian_backend/__pycache__/settings.cpython-310.pyc
+guardian_backend/guardian_backend/__pycache__/urls.cpython-310.pyc
+guardian_backend/guardian_backend/__pycache__/wsgi.cpython-310.pyc
+guardian_backend/db.sqlite3
+guardian_backend/guardian_backend/__init__.py
