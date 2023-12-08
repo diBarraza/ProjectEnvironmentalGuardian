@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# ProjectEnvironmentalGuardian
 
-First, run the development server:
+<p align="center">
+  <img align="center" src="enviromental-guardian/src/app/statics/8699849.png" alt="Logo" width="100" height="100"/>
+</p>
+
+
+<h1 align="center">Project Full-Stack version</h1>
+
+
+<p align="center">
+  <a href="https://github.com/diBarraza/ProjectEnvironmentalGuardian">diBarraza -> Diego Sebastian Barraza Moreno</a>
+</p>
+
+<!-- Status -->
+
+<h4 align="center"> 
+	🚧  SQLenviromental-guardian 🚀 Under construction...  🚧
+</h4> 
+
+
+ProjectEnvironmentalGuardian is a web application. This project aims to raise awareness about the issue of solid waste generation, emphasizing the responsibility of humans in their relationship with nature. Through various initiatives and tools implemented in the application, we seek to inform and educate people about the importance of proper waste management, promoting sustainable practices that respect the environment. Our goal is to inspire a change in behavior and advocate for a more eco-friendly lifestyle, thereby contributing to the preservation of the natural environment for future generations..
+
+## Technologies Used
+
+- **Front-end:** Developed with [Next.js](https://nextjs.org/), a React framework that makes it easy to build fast and efficient web applications.
+
+- **Back-end:** Implemented in [Django](https://www.djangoproject.com/), a Python web framework that encourages rapid and clean development.
+
+## Installation
+
+Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed for the front-end, and [Python](https://www.python.org/) and [pipenv](https://pipenv.pypa.io/) for the back-end.
+
+### Front-end (Next.js)
 
 ```bash
+# Navigate to the front-end directory
+cd frontend/
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+### Back-end (Django.py)
+```bash
+# Navigate to the back-end directory
+cd backend/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Install dependencies
+pipenv install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Activate the virtual environment
+pipenv shell
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Run migrations
+python manage.py migrate
 
-## Learn More
+# Start the server
+python manage.py runserver
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
