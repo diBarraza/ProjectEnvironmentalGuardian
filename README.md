@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/diBarraza/ProjectEnvironmentalGuardian">diBarraza -> Diego Sebastian Barraza Moreno</a>
+  <a href="https://github.com/diBarraza">diBarraza -> Diego Sebastian Barraza Moreno</a>
 </p>
 
 <!-- Status -->
