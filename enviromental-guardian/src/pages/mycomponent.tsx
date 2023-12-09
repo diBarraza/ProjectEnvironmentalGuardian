@@ -3,13 +3,15 @@ import MyComponent from '../app/component/MyComponent'
 import React from 'react';
 export default function Page() {
     return(
-        <div>
+        <div className="flex">
             <Sidebar />
-            <main>
+            <div className="ml-64 p-8">
                 <MyComponent></MyComponent>
-                <p>About</p>
-            </main>
-            
+            {/* Ajusta la clase 'ml-64' según el ancho de la barra lateral */}
+            <p className="text-xl font-bold mb-4">Json back</p>
+            {/* Contenido adicional de la página de características */}
         </div>
+        
+    </div>
     )
 }

@@ -10,21 +10,30 @@ const Sidebar: React.FC = () => {
         <h1 className="text-2xl font-semibold">SideNavBar</h1>
         {/* Agrega tus elementos de menú aquí */}
         <ul className="mt-4 space-y-2">
-            <li className="hover:bg-gray-700 p-2 rounded">
-                <Link href="/">Home</Link>
-            </li>          
-            <li className="hover:bg-gray-700 p-2 rounded">
-                <Link href="/features">Features</Link>
-            </li>
-            <li className="hover:bg-gray-700 p-2 rounded">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="hover:bg-gray-700 p-2 rounded">
-              <Link href="/mycomponent">My Components</Link>
-            </li>
-            <li className="hover:bg-gray-700 p-2 rounded">
-              <Link href="/settings">Settings</Link>
-            </li>
+            <Link href="/"><li className="hover:bg-gray-700 p-2 rounded">
+              Home
+            </li> 
+            </Link>         
+            <Link href="/features">
+              <li className="hover:bg-gray-700 p-2 rounded">
+                Features
+              </li>
+            </Link>                      
+            <Link href="/about">
+              <li className="hover:bg-gray-700 p-2 rounded">
+                About
+              </li>
+            </Link>
+            <Link href="/mycomponent">
+              <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
+                My Components
+              </li>
+            </Link>
+            <Link href="/settings">
+              <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
+                Settings
+              </li>
+            </Link>
           {/* Agrega más elementos de menú según sea necesario */}
         </ul>
       </div>
