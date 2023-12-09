@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from features.views import mi_vista_json
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('json/', mi_vista_json, name='mi_vista_json'),
 ]

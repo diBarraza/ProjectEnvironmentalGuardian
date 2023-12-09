@@ -4,3 +4,10 @@ guardian_backend/guardian_backend/__pycache__/urls.cpython-310.pyc
 guardian_backend/guardian_backend/__pycache__/wsgi.cpython-310.pyc
 guardian_backend/db.sqlite3
 guardian_backend/guardian_backend/__init__.py
+guardian_backend/features/__pycache__/__init__.cpython-310.pyc
+guardian_backend/features/__pycache__/admin.cpython-310.pyc
+guardian_backend/features/__pycache__/apps.cpython-310.pyc
+guardian_backend/features/__pycache__/models.cpython-310.pyc
+guardian_backend/features/__pycache__/views.cpython-310.pyc
+guardian_backend/features/migrations/__pycache__/__init__.cpython-310.pyc
+guardian_backend/features/migrations/__init__.py
