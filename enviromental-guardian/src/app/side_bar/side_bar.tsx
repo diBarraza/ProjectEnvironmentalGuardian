@@ -20,6 +20,9 @@ const Sidebar: React.FC = () => {
               <Link href="/about">About</Link>
             </li>
             <li className="hover:bg-gray-700 p-2 rounded">
+              <Link href="/mycomponent">My Components</Link>
+            </li>
+            <li className="hover:bg-gray-700 p-2 rounded">
               <Link href="/settings">Settings</Link>
             </li>
           {/* Agrega más elementos de menú según sea necesario */}
