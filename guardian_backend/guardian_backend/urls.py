@@ -22,4 +22,5 @@ from features.views import mi_vista_json
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('json/', mi_vista_json, name='mi_vista_json'),
-]
+    path('json/nine_cards', mi_vista_json, name='nine_cards'),
+]    
