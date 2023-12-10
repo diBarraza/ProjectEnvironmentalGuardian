@@ -1,17 +1,17 @@
-
-
 import React from 'react';
-import Sidebar from '../app/side_bar/side_bar';
 import 'tailwindcss/tailwind.css';
+
 
 export default function Home() {
   return (
-    <div className="flex">
-          <Sidebar />
-          <div className="ml-64 p-8"> {/* Ajusta la clase 'ml-64' según el ancho de la barra lateral */}
-          <p className="text-xl font-bold mb-4">Home</p>
-          {/* Contenido adicional de la página de características */}
-          </div>
-      </div>
+    <div
+    className="bg-cover"
+      style={{
+        backgroundImage: 'url("/images/FondoHome.jpg")', // Reemplaza la ruta con la ubicación de tu imagen
+      }}
+    >
+      <h1 className="text-xl font-bold mb-4">Home</h1>
+      <h2 className="text-xl font-bold mb-4">EnverimentalGuardian</h2>
+    </div>  
   )
 }

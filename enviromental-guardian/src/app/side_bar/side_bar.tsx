@@ -4,43 +4,29 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 const Sidebar: React.FC = () => {
   return (
-    <div className="bg-gray-800 text-white h-screen w-64 flex flex-col justify-between">
+    <div className="bg-gray-800 text-white h-16 flex justify-between items-center px-4">
+      <Link href="/">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Enviromental Guardian</li>
+        </Link>
       {/* Contenido del menú */}
-      <div className="p-4">
-        <h1 className="text-2xl font-semibold">SideNavBar</h1>
-        {/* Agrega tus elementos de menú aquí */}
-        <ul className="mt-4 space-y-2">
-            <Link href="/"><li className="hover:bg-gray-700 p-2 rounded">
-              Home
-            </li> 
-            </Link>         
-            <Link href="/features">
-              <li className="hover:bg-gray-700 p-2 rounded">
-                Features
-              </li>
-            </Link>                      
-            <Link href="/about">
-              <li className="hover:bg-gray-700 p-2 rounded">
-                About
-              </li>
-            </Link>
-            <Link href="/mycomponent">
-              <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
-                My Components
-              </li>
-            </Link>
-            <Link href="/settings">
-              <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
-                Settings
-              </li>
-            </Link>
-          {/* Agrega más elementos de menú según sea necesario */}
-        </ul>
-      </div>
-      {/* Pie de página del menú */}
-      <div className="p-4">
-        <p className="text-sm">© 2023 SideNavBar Inc.</p>
-      </div>
+      <ul className="flex space-x-4">
+        <Link href="/">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Home</li>
+        </Link>
+        <Link href="/features">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Features</li>
+        </Link>
+        <Link href="/about">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">About</li>
+        </Link>
+        <Link href="/mycomponent">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">My Components</li>
+        </Link>
+        <Link href="/settings">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Settings</li>
+        </Link>
+        {/* Agrega más elementos de menú según sea necesario */}
+      </ul>
     </div>
   );
 };
