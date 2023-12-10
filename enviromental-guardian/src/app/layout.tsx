@@ -8,10 +8,10 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-lime-300">
       <Sidebar />
       { children }
-      <footer className="bg-gray-800 text-white p-4">
+      <footer className="bg-lime-900  text-white p-4">
         {/* Contenido del pie de página */}
         <p>&copy; 2023 Enviromental Guardian</p>
       </footer>

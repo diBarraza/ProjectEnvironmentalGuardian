@@ -4,7 +4,7 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 const Sidebar: React.FC = () => {
   return (
-    <div className="bg-gray-800 text-white h-16 flex justify-between items-center px-4">
+    <div className="bg-lime-900 text-white h-16 flex justify-between items-center px-4">
       <Link href="/">
           <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Enviromental Guardian</li>
         </Link>
