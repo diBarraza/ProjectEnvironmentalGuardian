@@ -1,38 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const VisitCard = ({ visitData }) => {
+const VisitCard = () => {
+  const [visitData, setVisitData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/json/nine_cards');
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setVisitData(data);  // Asigna el array de objetos directamente
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="card bg-white p-4 shadow-md rounded-md">
-      <h2 className="text-xl font-bold mb-4">{visitData.title}</h2>
-      <p className="text-gray-700">
-        {visitData.description} <span className="text-blue-500">{visitData.visitCount}</span> {visitData.description_general}.
-      </p>
+    <div>
+      {visitData && visitData.ultimas_nueve_tarjetas ? 
+      visitData.ultimas_nueve_tarjetas.map((tarjeta) => (
+        <div key={tarjeta.id} className="card bg-white p-4 shadow-md rounded-md mb-4">
+          <h2 className="text-xl font-bold mb-4">{tarjeta.title}</h2>
+          <p className="text-gray-700">
+            {tarjeta.description} <span className="text-blue-500">{tarjeta.visitCount}</span> {tarjeta.description_general}.
+          </p>
+        </div>
+      )) : 'Cargando...'}
     </div>
   );
 };
 
-const NineVisitCards = () => {
-  // Datos para cada tarjeta
-  const cardData = [
-    { title: 'Tarjeta 1', description: 'Descripción 1', visitCount: 100, description_general: 'veces' },
-    { title: 'Tarjeta 2', description: 'Descripción 2', visitCount: 200, description_general: 'veces' },
-    { title: 'Tarjeta 3', description: 'Descripción 3', visitCount: 300, description_general: 'veces' },
-    { title: 'Tarjeta 4', description: 'Descripción 4', visitCount: 400, description_general: 'veces' },
-    { title: 'Tarjeta 5', description: 'Descripción 5', visitCount: 500, description_general: 'veces' },
-    { title: 'Tarjeta 6', description: 'Descripción 6', visitCount: 600, description_general: 'veces' },
-    { title: 'Tarjeta 7', description: 'Descripción 7', visitCount: 700, description_general: 'veces' },
-    { title: 'Tarjeta 8', description: 'Descripción 8', visitCount: 800, description_general: 'veces' },
-    { title: 'Tarjeta 9', description: 'Descripción 9', visitCount: 900, description_general: 'veces' },
-    
-  ];
-
-  return (
-    <div className="grid grid-cols-3 gap-8 p-8">
-      {cardData.map((data, index) => (
-        <VisitCard key={index} visitData={data} />
-      ))}
-    </div>
-  );
-};
-
-export default NineVisitCards;
+export default VisitCard;
