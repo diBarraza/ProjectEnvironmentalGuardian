@@ -1,6 +1,5 @@
 import 'tailwindcss/tailwind.css';
 import Layout from '@/app/layoutdiBarraza';
-import VisitCard from '../app/component/cards/VisitCard';
 import NineVisitCards from '../app/component/cards/NineVisitCards';
 
 export default function Page() {
