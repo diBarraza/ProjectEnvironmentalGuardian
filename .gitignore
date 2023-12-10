@@ -17,3 +17,5 @@ guardian_backend/features/migrations/__pycache__/0002_card.cpython-310.pyc
 guardian_backend/features/migrations/__pycache__/0003_remove_card_feature_alter_card_description_general.cpython-310.pyc
 guardian_backend/features/migrations/0002_card.py
 guardian_backend/features/migrations/0003_remove_card_feature_alter_card_description_general.py
+guardian_backend/features/migrations/__pycache__/0004_rename_date_created_card_created_at.cpython-310.pyc
+guardian_backend/features/migrations/0004_rename_date_created_card_created_at.py

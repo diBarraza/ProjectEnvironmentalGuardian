@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from features.views import mi_vista_json
+from features.views import mi_vista_json, nine_cards
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('json/', mi_vista_json, name='mi_vista_json'),
-    path('json/nine_cards', mi_vista_json, name='nine_cards'),
+    path('json/nine_cards', nine_cards, name='nine_cards'),
 ]    

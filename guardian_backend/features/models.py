@@ -17,6 +17,6 @@ class Card(models.Model):
     description = models.TextField()
     # description_general nullable
     description_general = models.TextField(null=True, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title 
