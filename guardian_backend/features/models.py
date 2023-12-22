@@ -19,4 +19,10 @@ class Card(models.Model):
     description_general = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.title 
+        return self.title
+
+class CardFeature(models.Model):
+    card = models.ForeignKey(Card, on_delete=models.CASCADE)
+    feature = models.ForeignKey(Feature, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.card.title + ' - ' + self.feature.title
