@@ -1,7 +1,7 @@
-from django.shortcuts import render
+
 from django.http import JsonResponse
-from django.core.serializers import serialize
-from .models import Feature, Card
+
+from .models import Card
 
 def mi_vista_json(request):
     data = {'mensaje': 'First message from Django!'}

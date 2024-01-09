@@ -19,6 +19,9 @@ const Sidebar: React.FC = () => {
         <Link href="/games">
           <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Games</li>
         </Link>
+        <Link href="/credenciales">
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Credenciales</li>
+        </Link>
         <Link href="/about">
           <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">About</li>
         </Link>

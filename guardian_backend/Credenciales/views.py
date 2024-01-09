@@ -9,7 +9,7 @@ def return_credenciales(request):
         'id': credencial.id,
         'codigo': credencial.codigo,
         'alumno': credencial.alumno.nombre,
-        'rut': credencial.alumno.rut + "-" + credencial.alumno.dv,
+        'rut': str(credencial.alumno.rut) + "-" + str(credencial.alumno.dv),
         'estado': credencial.estado.nombre,
         
         }for credencial in credenciales

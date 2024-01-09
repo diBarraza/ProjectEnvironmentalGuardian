@@ -10,8 +10,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-lime-300">
       <Sidebar />
-      { children }
-      <footer className="bg-lime-900  text-white p-4">
+      <div className='flex-grow'>
+        { children }
+      </div>
+      <footer className="bg-lime-900  text-white p-4 mt-auto">
         {/* Contenido del pie de página */}
         <p>&copy; 2023 Enviromental Guardian</p>
       </footer>
