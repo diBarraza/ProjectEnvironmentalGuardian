@@ -3,3 +3,5 @@ guardian_backend/db.sqlite3
 guardian_backend/guardian_backend/__init__.py
 guardian_backend/features/__pycache__/
 guardian_backend/features/migrations/
+guardian_backend/Credenciales/migrations/
+guardian_backend/Credenciales/__pycache__/

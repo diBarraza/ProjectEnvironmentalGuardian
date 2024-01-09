@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'features',
     'corsheaders',
+    'Credenciales',
 ]
 
 MIDDLEWARE = [

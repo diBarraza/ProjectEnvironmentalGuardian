@@ -10,8 +10,7 @@ def mi_vista_json(request):
 # Create your views here.
 
 def nine_cards(request):
-    ultimas_nueve_tarjetas = Card.objects.all().order_by('-id')[:9]
-   
+    ultimas_nueve_tarjetas = Card.objects.all().order_by('-id')[:9] 
     # Convertir las tarjetas a una lista de diccionarios
     tarjetas_list = [
         {
