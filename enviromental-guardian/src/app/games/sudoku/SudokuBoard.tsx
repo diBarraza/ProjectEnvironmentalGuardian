@@ -16,7 +16,6 @@ const SudokuBoard: React.FC<SudokuBoardProps> = ({ initialBoard }) => {
   };
 
   return (
-   
     <div className="grid grid-cols-9 gap-1 justify-items-center m-0">
     {board.map((row, rowIndex) => (
         row.map((cell, colIndex) => (
