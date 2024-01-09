@@ -10,12 +10,9 @@ export default function Page() {
                 <div className="mx-8 my-8"> {/* Utiliza la clase 'flex' para que los elementos hijos se coloquen en línea */}
                     <NineVisitCards/>
                     
-                   
                     {/* Contenido adicional de la página de características */}
                 </div> 
                 
-                   
-
             </div>
             
         </Layout>

@@ -7,7 +7,7 @@ const TablaCredenciales = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/credenciales/');
+        const response = await fetch('http://127.0.0.1:8000/credenciales/get_credenciales/');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -40,10 +40,9 @@ const TablaCredenciales = () => {
         <div className='flex justify-between items-center'>
           <h1 className="text-2xl font-bold mb-4">Tabla de Credenciales</h1>
           <div className='flex flex-row'>
-            <button className='bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded' onClick={openModal} >Agregar</button>
+            <button className='bg-green-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded'>Buscar</button>
+            <button className='bg-green-900 mx-1 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded' onClick={openModal} >Agregar</button>
             <ModalCrearSolicitudes isOpen={isModalOpen} onRequestClose={closeModal} />  
-            <button className='bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded'>Eliminar</button>
-            <button className='bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded'>Buscar</button>
           </div>
         </div>
       </div>
