@@ -2,20 +2,44 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import SelectAlumnos from './select_alumnos';
 import SelectEstados_credenciales from './select_estados_credenciales';
-Modal.setAppElement('#root-modal-solicitudes'); // Asegúrate de ajustar el ID según el elemento raíz de tu aplicación
 
-const ModalCrearSolicitudes = ({ isOpen, onRequestClose }) => {
-  const [option1, setOption1] = useState('');
-  const [option2, setOption2] = useState('');
+Modal.setAppElement('#root-modal-solicitudes');
+
+const ModalCrearSolicitudes = ({ isOpen, onRequestClose,showAlert }) => {
   const [textInput, setTextInput] = useState('');
-  const handleSave = () => {
-    console.log('Option 1:', option1);
-    console.log('Option 2:', option2);
-    console.log('Text Input:', textInput);
+  
+  const handleSave = async() => {
+    // ... tu lógica para hacer la solicitud
+    var codigoText = document.getElementById('codigo').value;
+    var idAlumno = document.getElementById('alumno').value;
+    var idEstadoCredencial = document.getElementById('estado_credencial').value;
+    const response = await fetch('http://localhost:8000/credenciales/post_crear_credencial/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Puedes agregar otros encabezados según sea necesario
+      },
+      
+      body: JSON.stringify({
+        "codigo": codigoText,
+        "alumno": idAlumno,
+        "estado_credencial": idEstadoCredencial
+      }),
+    });
+    if (response.ok) {
+      console.log('Guardado exitoso');
+      showAlert("success", "Guardado exitoso desde el modal");
+      
+    } else {
+      console.error('Error al guardar:', response.status);
+      showAlert("error", "Error al guardar desde el modal");
+    }
+
     onRequestClose();
   };
 
   return (
+    
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
@@ -25,10 +49,10 @@ const ModalCrearSolicitudes = ({ isOpen, onRequestClose }) => {
       <div>
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-          onClick={onRequestClose}
-        >
+          onClick={onRequestClose}>
           X
         </button>
+        
         <h2 className="text-xl font-bold mb-4">Agregar solicitudes</h2>
         <label className="block mb-2">
           Código:
@@ -37,6 +61,7 @@ const ModalCrearSolicitudes = ({ isOpen, onRequestClose }) => {
             type="text"
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
+            id='codigo'
           />
         </label>
         <label className="block mb-2">
@@ -62,6 +87,7 @@ const ModalCrearSolicitudes = ({ isOpen, onRequestClose }) => {
         </button>
       </div>
     </Modal>
+    
   );
 };
 

@@ -10,8 +10,8 @@ export default function Home() {
     
     <div>
       <BackgroundImage>
-        <h1 className="text-xl font-bold mb-4">Home</h1>
-        <h2 className="text-xl font-bold mb-4">EnverimentalGuardian</h2>
+        <h1 className="text-xl  font-bold mb-4"></h1>
+        
         
       </BackgroundImage>
       

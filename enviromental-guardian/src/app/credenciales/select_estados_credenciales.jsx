@@ -30,9 +30,10 @@ const SelectEstados_credenciales = ({ onSelect }) => {
       className="border p-2 w-full rounded"
       value={selectedEstados_credenciales}
       onChange={handleEstadoCredencialChange}
+      id='estado_credencial'
     >
       {estados_credenciales.map((estado) => (
-        <option key={estado.id} value={estado.nombre}>
+        <option key={estado.id} value={estado.id}>
           {estado.nombre} 
         </option>
       ))}

@@ -30,9 +30,10 @@ const SelectAlumnos = ({ onSelect }) => {
       className="border p-2 w-full rounded"
       value={selectedAlumno}
       onChange={handleAlumnoChange}
+      id='alumno'
     >
       {alumnos.map((alumno) => (
-        <option key={alumno.id} value={alumno.nombre}>
+        <option key={alumno.id} value={alumno.id}>
           {alumno.nombre}  {alumno.rut}
         </option>
       ))}
