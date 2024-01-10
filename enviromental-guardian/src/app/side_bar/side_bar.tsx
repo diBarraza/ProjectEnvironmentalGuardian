@@ -6,7 +6,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="bg-lime-900 text-white h-16 flex justify-between items-center px-4">
       <Link href="/">
-          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Enviromental Guardian</li>
+          <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">Aplicaciones Varias</li>
         </Link>
       {/* Contenido del menú */}
       <ul className="flex space-x-4">

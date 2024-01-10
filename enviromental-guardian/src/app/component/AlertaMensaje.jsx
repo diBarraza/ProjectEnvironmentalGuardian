@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 
 const AlertaMensaje = ({ type, message}) => {
-  console.log('Type:', type);
-  console.log('Message:', message);
+  //console.log('Type:', type);
+  //console.log('Message:', message);
   const [isVisible, setIsVisible] = useState(true);
   
   useEffect(() => {

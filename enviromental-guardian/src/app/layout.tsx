@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
       <footer className="bg-lime-900 text-white p-4 mt-auto">
         {/* Contenido del pie de página */}
-        <p>&copy; 2023 Enviromental Guardian</p>
+        <p>&copy; 2024 Aplicaciones Varias</p>
       </footer>
       
     </div>

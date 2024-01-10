@@ -29,7 +29,7 @@ const TablaCredenciales = () => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }else{
-          showAlert("success", "Datos cargados");
+          showAlert("success", "Credenciales Cargadas.");
         }
         const data = await response.json();
         setCredencialesData(data);
@@ -46,7 +46,7 @@ const TablaCredenciales = () => {
 
   return (
     
-    <div className="p-4">
+    <div className="p-1">
       <AlertaMensaje id="alertaCredenciales" type={alertMessage.type} message={alertMessage.message}></AlertaMensaje>
       <div className='container py-10 px-10 mx-0 min-w-full flex flex-col'>
         <div className='flex justify-between items-center'>
