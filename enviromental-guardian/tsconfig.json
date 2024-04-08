@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/pages/credenciales.tsx"  ],
+, "src/pages/credenciales/home_lotes.tsx"  ],
   "exclude": [
     "node_modules"
   ]

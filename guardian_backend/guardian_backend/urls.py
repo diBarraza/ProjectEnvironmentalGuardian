@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from features.views import mi_vista_json, nine_cards
+from features.views import mi_vista_json, nine_cards, home_principal
 
 
 
@@ -25,5 +25,6 @@ urlpatterns = [
     path('json/', mi_vista_json, name='mi_vista_json'),
     path('json/nine_cards', nine_cards, name='nine_cards'),
     path('credenciales/',include('Credenciales.urls')),
+    path('', home_principal, name='home_principal'),
     
 ]    

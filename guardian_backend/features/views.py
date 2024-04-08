@@ -1,6 +1,6 @@
 
 from django.http import JsonResponse
-
+from django.shortcuts import render
 from .models import Card
 
 def mi_vista_json(request):
@@ -27,3 +27,6 @@ def nine_cards(request):
 
     # Devolver la respuesta como JSON
     return JsonResponse({'ultimas_nueve_tarjetas': tarjetas_list}, safe=False)
+
+def home_principal(request):
+    return render(request, 'home_principal.html')

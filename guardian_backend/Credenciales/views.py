@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Credencial,Alumno,EstadoCredencial
+from .models import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -9,13 +9,46 @@ def return_credenciales(request):
     credenciales_list = [{
         'id': credencial.id,
         'codigo': credencial.codigo,
-        'alumno': credencial.alumno.nombre,
-        'rut': str(credencial.alumno.rut) + "-" + str(credencial.alumno.dv),
-        'estado': credencial.estado.nombre,
-        
+        'lote': credencial.lote.id,
+        'estado_credencial': credencial.estado.nombre if credencial.estado else 'Sin estado',
+        'fecha_creacion': credencial.created_at,
+        'fecha_entrega': credencial.fecha_entregada,
         }for credencial in credenciales
     ]
     return JsonResponse({'credenciales': credenciales_list}, safe=False)
+
+def return_credenciales_id(request,id):
+    credenciales = Credencial.objects.all()
+    print("La id que llega desde el front end es: " + str(id))
+    credenciales_list = [{
+        'id': credencial.id,
+        'codigo': credencial.codigo,
+        'lote': credencial.lote.id,
+        'estado_credencial': credencial.estado.nombre if credencial.estado else 'Sin estado',
+        'fecha_creacion': credencial.created_at,
+        'fecha_entrega': credencial.fecha_entregada,
+        }for credencial in credenciales
+    ]
+    return JsonResponse({'credenciales': credenciales_list}, safe=False)
+
+def return_lotes(request):
+    lotes = Lotes.objects.all()
+    
+    lotes_list = []
+    for lote in lotes:
+        cantidad_credenciales = 0
+        crenciales_lote = Credencial.objects.filter(lote = lote)
+        cantidad_credenciales = len(crenciales_lote)
+        data = {                
+        'id': lote.id,
+        'tipo': lote.tipo,
+        'fecha_emision': lote.created_at,
+        'cantidad_credenciales': cantidad_credenciales,
+        'estado': lote.estado.nombre,
+        'fecha_recepcionado': lote.fecha_recepcionado,
+        }
+        lotes_list.append(data)
+    return JsonResponse({'lotes': lotes_list}, safe=False)
 
 def return_alumnos(request):
     alumnos = Alumno.objects.all()

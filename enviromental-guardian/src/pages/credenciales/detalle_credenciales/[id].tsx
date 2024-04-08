@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Layout from '@/app/layoutdiBarraza';
-import TablaCredenciales from '../app/credenciales/TablaCredenciales';
-
-
-
-
+import TablaCredenciales from '../../../app/credenciales/TablaCredenciales';
+import { useRouter } from 'next/router';
 export default function Page() {
+  const router = useRouter();
+  const { id } = router.query;
   return (
       <Layout>
         <div className="flex flex-col mb-4">        
-          <div className="mx-8 my-8"> {/* Utiliza la clase 'flex' para que los elementos hijos se coloquen en línea */}
-            <TablaCredenciales/>
-            
+          <div className="mx-8 my-8">
+            <TablaCredenciales id_lote={id}/>            
             {/* Contenido adicional de la página de características */}
           </div>             
         </div> 

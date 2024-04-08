@@ -1,5 +1,5 @@
 'use client'
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
 import 'tailwindcss/tailwind.css';
 import Sidebar from '../app/side_bar/side_bar';
 
